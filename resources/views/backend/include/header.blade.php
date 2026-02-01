@@ -27,6 +27,11 @@
 					<i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
 			    </a>
 			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="{{ url('/') }}" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
+					<i class="icon-Chat"></i>Live
+			    </a>
+			</li>
 			
 		</ul> 
 	  </div>

@@ -315,6 +315,8 @@
 
 
     <!-- Vendor JS -->
+    
+
     <script src="{{ asset('backend/assets') }}/js/vendors.min.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/chat-popup.js"></script>
     <script src="{{ asset('backend/assets') }}/icons/feather-icons/feather.min.js"></script>
@@ -322,11 +324,35 @@
     <script src="{{ asset('backend/assets') }}/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
     <script src="{{ asset('backend/assets') }}/vendor_components/moment/min/moment.min.js"></script>
     <script src="{{ asset('backend/assets') }}/vendor_components/fullcalendar/fullcalendar.js"></script>
-
     <!-- EduAdmin App -->
     <script src="{{ asset('backend/assets') }}/js/template.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/dashboard.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/calendar.js"></script>
+    {{-- Success message --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @if(session('success'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: "{{ session('success') }}",
+            timer: 2000,
+            showConfirmButton: false
+        });
+    </script>
+    @endif
+
+    {{-- Error message --}}
+    @if(session('error'))
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: "{{ session('error') }}"
+        });
+    </script>
+    @endif
+
 
 </body>
 

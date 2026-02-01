@@ -21,6 +21,11 @@ Route::middleware('auth')->group(function () {
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/admin', 'admin')->name('admin');
     Route::get('/admin/contact', 'contact')->name('admin.contact');
+    Route::get('/admin/site-settings', 'siteSettings')->name('admin.site-settings');
+    Route::post('/admin/site-settings/update', 'updateSiteSettings')->name('admin.site-settings.update');
+
+    Route::get('/admin/seo-settings', 'seoSettings')->name('admin.seo-settings');
+    Route::post('/admin/seo-settings/update', 'updateSeoSettings')->name('admin.seo-settings.update');
 });
 
 

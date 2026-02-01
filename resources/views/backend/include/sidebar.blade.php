@@ -18,18 +18,18 @@
 						<li><a href="index.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 1</a></li>
 					  </ul>
 				</li>	
-				<li class="header">LOGIN & ERROR </li>
+				<li class="header">Company Settings</li>
 				<li class="treeview">
 				  <a href="#">
 					<i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
-					<span>Authentication</span>
+					<span>Settings</span>
 					<span class="pull-right-container">
 					  <i class="fa fa-angle-right pull-right"></i>
 					</span>
 				  </a>
 				  <ul class="treeview-menu">
-					<li><a href="auth_login.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Login</a></li>
-					
+					<li><a href="{{ route('admin.site-settings') }}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Company Information</a></li>
+					<li><a href="{{ route('admin.seo-settings') }}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>SEO Settings</a></li>
 				  </ul>
 				</li> 	     
 			  </ul>
