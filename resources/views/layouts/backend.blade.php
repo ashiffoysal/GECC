@@ -328,6 +328,8 @@
     <script src="{{ asset('backend/assets') }}/js/template.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/dashboard.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/calendar.js"></script>
+	<script src="{{ asset('backend/assets') }}/vendor_components/datatable/datatables.min.js"></script>
+    <script src="{{ asset('backend/assets') }}/js/pages/data-table.js"></script>
     {{-- Success message --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if(session('success'))
