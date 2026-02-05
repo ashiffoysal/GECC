@@ -70,7 +70,7 @@
                                    @endif
 
                                     <a href="{{ route('admin.team.edit', $data->id) }}" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a id="delete" href="{{ route('admin.team.delete', $data->id) }}" class="btn btn-danger" > Delete</a>
                                     
                                 </td>
                             @endforeach

@@ -53,6 +53,21 @@
                                               class="path1"></span><span class="path2"></span></i>Team List</a></li>
                           </ul>
                       </li>
+                                <li class="treeview">
+                          <a href="#">
+                              <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
+                              <span>Gallery</span>
+                              <span class="pull-right-container">
+                                  <i class="fa fa-angle-right pull-right"></i>
+                              </span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ route('admin.gallery.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Gallery Create</a></li>
+                              <li><a href="{{ route('admin.gallery.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Gallery List</a></li>
+                          </ul>
+                      </li>
                   </ul>
               </div>
           </div>

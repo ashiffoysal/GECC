@@ -122,32 +122,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-12">
-                        <div class="box">
-                            <div class="box-header with-border">
-                                <h4 class="box-title">Extra Settings</h4>
-                            </div>
-                            <div>
-                                <div class="box-body">
-                                    <style>
-                                        .site-logo {
-                                            width: 200px;
-                                            /* set fixed width */
-                                            height: 60px;
-                                            /* set fixed height */
-                                            object-fit: contain;
-                                            /* keeps aspect ratio inside box */
-                                            display: block;
-                                            /* avoids inline spacing issues */
-                                            margin: 0 auto;
-                                            /* centers if needed */
-                                        }
-                                    </style>
-                                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </form>
         </section>

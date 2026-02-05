@@ -328,8 +328,8 @@
     <script src="{{ asset('backend/assets') }}/js/template.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/dashboard.js"></script>
     <script src="{{ asset('backend/assets') }}/js/pages/calendar.js"></script>
-	<script src="{{ asset('backend/assets') }}/vendor_components/datatable/datatables.min.js"></script>
-    <script src="{{ asset('backend/assets') }}/js/pages/data-table.js"></script>
+	{{-- <script src="{{ asset('backend/assets') }}/vendor_components/datatable/datatables.min.js"></script>
+    <script src="{{ asset('backend/assets') }}/js/pages/data-table.js"></script> --}}
     {{-- Success message --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if(session('success'))
@@ -355,7 +355,28 @@
     </script>
     @endif
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
+	<script>
+		$(document).on("click", "#delete", function(e) {
+			e.preventDefault();
+			var link = $(this).attr("href");
+			swal({
+					title: "Are you Want to delete?",
+					text: "Once Delete, This will be Permanently Delete!",
+					icon: "warning",
+					buttons: true,
+					dangerMode: true,
+				})
+				.then((willDelete) => {
+					if (willDelete) {
+						window.location.href = link;
+					} else {
+						swal("Safe Data!");
+					}
+				});
+		});
+	</script>
 </body>
 
 </html>

@@ -64,8 +64,8 @@ class TeamController extends Controller
     // edit
     public function edit($id)
     {
-        $teamMember = OurTeam::findOrFail($id);
-        return view('backend.team.edit', compact('teamMember'));    
+        $team = OurTeam::findOrFail($id);
+        return view('backend.team.edit', compact('team'));
     }
 
     // update
