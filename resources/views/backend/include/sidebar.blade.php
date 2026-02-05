@@ -66,7 +66,13 @@
                                               class="path1"></span><span class="path2"></span></i>Gallery Create</a></li>
                               <li><a href="{{ route('admin.gallery.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>Gallery List</a></li>
+
+                                                   <li><a href="{{ route('admin.faqs.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>FAQ Create</a></li>
+                              <li><a href="{{ route('admin.faqs.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>FAQ List</a></li>
                           </ul>
+                       
                       </li>
                   </ul>
               </div>
