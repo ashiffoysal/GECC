@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\FaqController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -63,6 +64,17 @@ Route::controller(FaqController::class)->group(function () {
     Route::get('/admin/faq/active/{id}', 'active')->name('admin.faqs.active');
 });
 
+// blog
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/admin/blog', 'index')->name('admin.blog.index');
+    Route::get('/admin/blog/create', 'create')->name('admin.blog.create');
+    Route::post('/admin/blog/store', 'store')->name('admin.blog.store');
+    Route::get('/admin/blog/edit/{id}', 'edit')->name('admin.blog.edit');
+    Route::post('/admin/blog/update/{id}', 'update')->name('admin.blog.update');
+    Route::get('/admin/blog/delete/{id}', 'destroy')->name('admin.blog.delete');
+    Route::get('/admin/blog/inactive/{id}', 'inactive')->name('admin.blog.inactive');
+    Route::get('/admin/blog/active/{id}', 'active')->name('admin.blog.active');
+});
 
 
 

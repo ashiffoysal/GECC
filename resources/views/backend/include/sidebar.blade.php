@@ -53,7 +53,7 @@
                                               class="path1"></span><span class="path2"></span></i>Team List</a></li>
                           </ul>
                       </li>
-                                <li class="treeview">
+                      <li class="treeview">
                           <a href="#">
                               <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
                               <span>Gallery</span>
@@ -63,16 +63,23 @@
                           </a>
                           <ul class="treeview-menu">
                               <li><a href="{{ route('admin.gallery.create') }}"><i class="icon-Commit"><span
-                                              class="path1"></span><span class="path2"></span></i>Gallery Create</a></li>
+                                              class="path1"></span><span class="path2"></span></i>Gallery Create</a>
+                              </li>
                               <li><a href="{{ route('admin.gallery.index') }}"><i class="icon-Commit"><span
-                                              class="path1"></span><span class="path2"></span></i>Gallery List</a></li>
+                                              class="path1"></span><span class="path2"></span></i>Gallery List</a>
+                              </li>
 
-                                                   <li><a href="{{ route('admin.faqs.create') }}"><i class="icon-Commit"><span
+                              <li><a href="{{ route('admin.faqs.create') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>FAQ Create</a></li>
                               <li><a href="{{ route('admin.faqs.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>FAQ List</a></li>
+
+                            <li><a href="{{ route('admin.blog.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Blog Create</a></li>
+                              <li><a href="{{ route('admin.blog.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Blog List</a></li>
                           </ul>
-                       
+
                       </li>
                   </ul>
               </div>

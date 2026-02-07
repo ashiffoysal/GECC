@@ -1,9 +1,9 @@
-			<section class="footer-top-area pt-100 pb-70">
+		<section class="footer-top-area pt-100 pb-70">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-md-6">
 						<div class="single-widget">
-							<a href="index.html">
+							<a href="">
 								<img src="{{ asset('frontend') }}/assets/img/white-logo.png" alt="White-Logo">
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt aliqua. Quis ipsum suspendisse ultrices gravida.</p>

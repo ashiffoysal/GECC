@@ -27,10 +27,8 @@
         <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/style.css">
         <!-- Responsive CSS -->
 		<link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/responsive.css">
-		
 		<!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('frontend') }}/assets/img/favicon.png">
-		
         <!-- Title -->
         <title>Peru - Consulting HTML Template</title>
     </head>
@@ -43,25 +41,19 @@
 			</div>
 		</div>
         <!-- End Preloader Area -->
-
 		<!-- Start Navbar Area -->
         @include('frontend.include.header')
 		<!-- End Navbar Area -->
-
 		@yield('content')
-
 		<!-- Start Footer Top Area -->
         @include('frontend.include.footer')
 		<!-- End Footer Bottom Area -->
-
 		<!-- Start Go Top Area -->
 		<div class="go-top">
 			<i class="fa fa-angle-double-up"></i>
 			<i class="fa fa-angle-double-up"></i>
 		</div>
-		<!-- End Go Top Area -->
-
-        
+		<!-- End Go Top Area -->        
         <!-- Jquery Min JS -->
         <script src="{{ asset('frontend') }}/assets/js/jquery.min.js"></script>
         <!-- Bootstrap Bundle Min JS -->
