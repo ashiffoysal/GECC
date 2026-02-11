@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\FaqController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\EventController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -74,6 +75,18 @@ Route::controller(BlogController::class)->group(function () {
     Route::get('/admin/blog/delete/{id}', 'destroy')->name('admin.blog.delete');
     Route::get('/admin/blog/inactive/{id}', 'inactive')->name('admin.blog.inactive');
     Route::get('/admin/blog/active/{id}', 'active')->name('admin.blog.active');
+});
+
+// event
+Route::controller(EventController::class)->group(function () {
+    Route::get('/admin/event', 'index')->name('admin.event.index');
+    Route::get('/admin/event/create', 'create')->name('admin.event.create');        
+    Route::post('/admin/event/store', 'store')->name('admin.event.store');
+    Route::get('/admin/event/edit/{id}', 'edit')->name('admin.event.edit');
+    Route::post('/admin/event/update/{id}', 'update')->name('admin.event.update');
+    Route::get('/admin/event/delete/{id}', 'destroy')->name('admin.event.delete');
+    Route::get('/admin/event/inactive/{id}', 'inactive')->name('admin.event.inactive');
+    Route::get('/admin/event/active/{id}', 'active')->name('admin.event.active');
 });
 
 

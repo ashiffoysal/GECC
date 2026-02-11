@@ -78,6 +78,10 @@
                                               class="path1"></span><span class="path2"></span></i>Blog Create</a></li>
                               <li><a href="{{ route('admin.blog.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>Blog List</a></li>
+                                <li><a href="{{ route('admin.event.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Event Create</a></li>
+                              <li><a href="{{ route('admin.event.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Event List</a></li>
                           </ul>
 
                       </li>
