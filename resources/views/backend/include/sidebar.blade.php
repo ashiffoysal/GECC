@@ -82,6 +82,11 @@
                                               class="path1"></span><span class="path2"></span></i>Event Create</a></li>
                               <li><a href="{{ route('admin.event.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>Event List</a></li>
+
+                                     <li><a href="{{ route('admin.slider.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Slider Create</a></li>
+                              <li><a href="{{ route('admin.slider.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Slider List</a></li>
                           </ul>
 
                       </li>

@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\FaqController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\EventController;
+use App\Http\Controllers\Backend\SliderController;
+
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -87,6 +89,19 @@ Route::controller(EventController::class)->group(function () {
     Route::get('/admin/event/delete/{id}', 'destroy')->name('admin.event.delete');
     Route::get('/admin/event/inactive/{id}', 'inactive')->name('admin.event.inactive');
     Route::get('/admin/event/active/{id}', 'active')->name('admin.event.active');
+});
+
+
+// slider
+Route::controller(SliderController::class)->group(function () {
+    Route::get('/admin/slider', 'index')->name('admin.slider.index');
+    Route::get('/admin/slider/create', 'create')->name('admin.slider.create');        
+    Route::post('/admin/slider/store', 'store')->name('admin.slider.store');
+    Route::get('/admin/slider/edit/{id}', 'edit')->name('admin.slider.edit');
+    Route::post('/admin/slider/update/{id}', 'update')->name('admin.slider.update');
+    Route::get('/admin/slider/delete/{id}', 'destroy')->name('admin.slider.delete');
+    Route::get('/admin/slider/inactive/{id}', 'inactive')->name('admin.slider.inactive');
+    Route::get('/admin/slider/active/{id}', 'active')->name('admin.slider.active');
 });
 
 
