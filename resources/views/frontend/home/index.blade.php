@@ -6,42 +6,28 @@
 <!-- Start Hero Slider Area -->
 		<section class="hero-slider-area">
 			<div class="hero-slider owl-carousel owl-theme">
-				<div class="hero-slider-item slider-item-bg-2">
-					<div class="d-table">
-						<div class="d-table-cell">
-							<div class="container">
-								<div class="hero-slider-text">
-									<span>Research More & More</span>
-									<h1>We Are Happy To Build Your Best <span>Business</span></h1>
-									<p>We help you for getting success</p>	
-									<div class="banner-button">
-										<a class="default-btn" href="contact.html">
-											Let's Start
-										</a>
-									</div>	
+				@foreach ($allSliders as $slider)
+					<div class="hero-slider-item slider-item-bg-{{ $slider->id }}">
+						<div class="d-table">
+							<div class="d-table-cell">
+								<div class="container">
+									<div class="hero-slider-text">
+										<span>{{ $slider->title }}</span>
+										<h1>{{ $slider->title }}</h1>
+										<p>{{ $slider->description }}</p>	
+										<div class="banner-button">
+											<a class="default-btn" href="{{ $slider->button_url }}">
+												Let's Start
+											</a>
+										</div>	
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="hero-slider-item slider-item-bg-1">
-					<div class="d-table">
-						<div class="d-table-cell">
-							<div class="container">
-								<div class="hero-slider-text">
-									<span>Research More & More</span>
-									<h1>Take Your Business To New <span>Heights</span></h1>
-									<p>We help you for getting success</p>	
-									<div class="banner-button">
-										<a class="default-btn" href="contact.html">
-											Let's Start
-										</a>
-									</div>	
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+			
+			
 			</div>
 			<div class="shape shape-1">
 				<img src="{{ asset('frontend') }}/assets/img/shape/1.png" alt="Shape">

@@ -32,7 +32,7 @@ class SliderController extends Controller
             $request->image->move(public_path('uploads/slider'), $imageName);  
         }
         // ✅ Insert Data
-        Slider::create([
+        Slider::insert([
             'title'       => $request->title,
             'description' => $request->description,
             'button_url'  => $request->button_url,

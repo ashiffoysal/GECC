@@ -56,8 +56,8 @@
                                     </div>
                                     <div class="col-lg-12 col-12">
                                         <div class="form-group">
-                                            <label for="details" class="form-label">Button Url</label>
-                                            <input type="text" name="details" id="details" value=""
+                                            <label for="button_url" class="form-label">Button Url</label>
+                                            <input type="text" name="button_url" id="button_url" value=""
                                                 class="form-control" placeholder="Enter slider item button url">
                                                 @error('button_url')
                                                 <div class="alert-danger">{{ $message }}</div>

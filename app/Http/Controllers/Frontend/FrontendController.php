@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\ContactMessage;
+use App\Models\Slider;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.home.index');
+        $allSliders = Slider::where('is_active',1)->where('is_deleted',1)->get();
+        return view('frontend.home.index', compact('allSliders'));
     }
     // other frontend methods will go here
     public function about()
@@ -106,5 +109,32 @@ class FrontendController extends Controller
     public function applicationProcess()
     {
         return view('frontend.application-process.index');
+    }
+    // contact form submission
+    public function submitContactForm(Request $request)
+    {        // Validate the form data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'phone' => 'required|string|max:20',
+            'message' => 'required|string',
+        ]); 
+        // Here you can handle the form submission, such as sending an email or saving the data to the database 
+        // For example, you can send an email using Laravel's Mail facade
+        // insert into contact_messages table
+        $insert=ContactMessage::insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ]);
+        // Send a success response back to the frontend
+        if($insert){
+            return redirect()->back()->with('success', 'Your message has been sent successfully!');
+        }else{
+            return redirect()->back()->with('error', 'There was an error sending your message. Please try again later.');
+        }
     }
 }

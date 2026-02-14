@@ -1,8 +1,8 @@
 		<section class="choose-area ptb-100">
 			<div class="container">
 				<div class="section-title">
-					<span>Why Choose Us</span>
-					<h2>We Can Give the Best Facilities for Business</h2>
+					<span>Why Choose GECC?</span>
+					<h2>We Provide the Best Facilities for Your Educational Journey Abroad</h2>
 				</div>
 
 				<div class="row align-items-center">

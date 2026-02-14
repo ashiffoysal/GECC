@@ -115,6 +115,8 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/success', 'success')->name('frontend.success');
     
     Route::get('/contact', 'contact')->name('frontend.contact');
+
+    Route::post('/contact', 'submitContactForm')->name('frontend.contact.submit');
     Route::get('/who-we-are', 'whoWeAre')->name('frontend.who-we-are');
     Route::get('/mission', 'mission')->name('frontend.mission');
     Route::get('/partner', 'partner')->name('frontend.partner');

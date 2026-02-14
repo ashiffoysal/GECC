@@ -358,8 +358,8 @@
     </script>
     @endif
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
 	<script>
 		$(document).on("click", "#delete", function(e) {
 			e.preventDefault();

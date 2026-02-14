@@ -33,6 +33,10 @@
 												<a href="{{ url('/about') }}" class="nav-link">About Us</a>
 											</li>
 											<li class="nav-item">
+												<a href="{{ url('/events') }}" class="nav-link">Events</a>
+											</li>
+											
+											<li class="nav-item">
 												<a href="{{ url('/team') }}" class="nav-link">Our Team</a>
 											</li>
 											<li class="nav-item">
