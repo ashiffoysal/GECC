@@ -7,7 +7,9 @@
 		<section class="hero-slider-area">
 			<div class="hero-slider owl-carousel owl-theme">
 				@foreach ($allSliders as $slider)
-					<div class="hero-slider-item slider-item-bg-{{ $slider->id }}">
+
+					<div class="hero-slider-item slider-item-bg-{{ $slider->id }}" style="
+    background-image: url({{ asset('uploads/slider/'.$slider->image) }});">
 						<div class="d-table">
 							<div class="d-table-cell">
 								<div class="container">
@@ -60,22 +62,22 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="single-box bg-1">
 							<i class="flaticon-statistics"></i>
-							<h3>Business Growth</h3>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt labore.</p>
+							<h3>University Admission Support</h3>
+							<p>We help you choose the right university and course based on your academic background and career goals.</p>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6">
 						<div class="single-box bg-2">
 							<i class="flaticon-creativity"></i>
-							<h3>Strategy Process</h3>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt labore.</p>
+							<h3>Visa & Immigration Guidance</h3>
+							<p>Our experienced team provides complete visa assistance, including documentation review, financial preparation, and interview guidance</p>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
 						<div class="single-box bg-3">
 							<i class="flaticon-mortarboard"></i>
-							<h3>Finance Manage</h3>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt labore.</p>
+							<h3>Career & Scholarship Counseling</h3>
+							<p>We offer personalized career advice and scholarship guidance to help you make informed decisions.</p>
 						</div>
 					</div>
 				</div>

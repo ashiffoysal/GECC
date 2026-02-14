@@ -4,34 +4,42 @@
 					<div class="col-lg-6">
 						<div class="about-title">
 							<span>About Us</span>
-							<h2>We ProvideTotal Business Solutions</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gda. Risus commodo viverra maecenas accumsan.</p>
+							<h2>Who We Are</h2>
+							<p>GECC is a UK-based education consultancy specializing in UK Higher Education. Our consultants are UK or European graduates and multilingual professionals dedicated to guiding students toward the right academic path.</p>
 							<ul>
 								<li>
 									<i class="flaticon-right-arrow"></i>
-									Premium Service Beyond you
+									We provide free counseling,
 								</li>
 								<li>
 									<i class="flaticon-right-arrow"></i>
-									Set a Like this Photo
+									Profile Assessment
 								</li>
 								<li>
 									<i class="flaticon-right-arrow"></i>
-									Premium Service beyond you
+									University Admission Support
 								</li>
 								<li>
 									<i class="flaticon-right-arrow"></i>
-									A wonderful Sarcenet
+									Document Editing
+								</li>
+								<li>
+									<i class="flaticon-right-arrow"></i>
+									Interview Preparation
+								</li>
+								<li>
+									<i class="flaticon-right-arrow"></i>
+									Complete Visa Assistance through Certified and Experienced Advisors
 								</li>
 							</ul>
-							<a class="default-btn" href="about.html">Discover More</a>
+							<a class="default-btn" href="{{ url('/contact') }}">Contact Us</a>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="about-us-img">
-							<img src="{{ asset('frontend') }}/assets/img/about-1.jpg" alt="About Us">
+							<img src="{{ asset('frontend') }}/assets/img/about-1.png" alt="About Us">
 							<div class="about-img-2">
-								<img src="{{ asset('frontend') }}/assets/img/about-2.jpg" alt="About Us">
+								<img src="{{ asset('frontend') }}/assets/img/about-2.png" alt="About Us">
 							</div>
 						</div>
 					</div>

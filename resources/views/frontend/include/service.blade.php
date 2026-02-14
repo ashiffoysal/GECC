@@ -1,8 +1,15 @@
+<style>
+	.best-services-area .nav-pills .nav-link {
+  
+    width: 300px;
+   
+}
+	</style>
 <section class="best-services-area ptb-100">
 			<div class="container">
 				<div class="section-title">
 					<span>What We do</span>
-					<h2>Our Best Services</h2>
+					<h2>Our Best Courses</h2>
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
@@ -12,14 +19,14 @@
 									<i class="flaticon-steering-wheel"></i>
 									<a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">
 										<i class="flaticon-pie-chart"></i>
-										Best Consulting
+							MBA
 									</a>
 								</li>
 
 								<li class="nav-item">
 									<a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">
 										<i class="flaticon-hand"></i>
-										Market Growth
+										Engineering
 									</a>
 								</li>
 
@@ -27,28 +34,28 @@
 									<i class="flaticon-tracking"></i>
 									<a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
 										<i class="flaticon-strategy"></i>
-										Saving Strategy
+										Law
 									</a>
 								</li>
 
 								<li class="nav-item">
 									<a class="nav-link" id="pills-4-tab" data-bs-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
 										<i class="flaticon-consultant"></i>
-										Consultant
+										Business & Management
 									</a>
 								</li>
 
-								<li class="nav-item">
+								{{-- <li class="nav-item">
 									<i class="flaticon-van"></i>
 									<a class="nav-link" id="pills-5-tab" data-bs-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">
 										<i class="flaticon-interview"></i>
 										Best service
 									</a>
-								</li>
+								</li> --}}
 							</ul>
 						</div>    
 
-						<div class="tab-content" id="pills-tabContent">
+						{{-- <div class="tab-content" id="pills-tabContent">
 							<div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
 								<div class="row align-items-center">
 									<div class="col-lg-4">
@@ -204,7 +211,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 				
