@@ -5,80 +5,31 @@
 					<h2>Latest News</h2>
 				</div>
 
+				@php
+					$allBlogs=App\Models\Blog::where('is_deleted',1)->where('is_active',1)->orderBy('id','DESC')->get();
+				@endphp
 				<div class="row">
 					<div class="blog-wrap owl-carousel owl-theme">
-						<div class="single-blog-post">
-							<div class="post-image">
-								<a href="blog-details.html">
-									<img src="{{ asset('frontend') }}/assets/img/blog/1.jpg" alt="image">
+						@foreach ($allBlogs as $blogs)
+							<div class="single-blog-post">
+								<div class="post-image">
+									<a href="{{ route('frontend.blog-detail', $blogs->id) }}">
+									<img src="{{ asset($blogs->blog_image) }}" alt="image">
 								</a>
 							</div>
 							<div class="post-content">
 								<div class="date">
 									<i class="fa fa-calendar"></i> 
-									<span>12 September 2024</span>
+									<span>{{ $blogs->created_at->format('d M Y') }}</span>
 								</div>
 								<h3>
-									<a href="blog-details.html">Successful Growth In Business 2024</a>
+									<a href="{{ route('frontend.blog-detail', $blogs->id) }}">{{ $blogs->title }}</a>
 								</h3>
-								<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-								<a href="blog-details.html" class="default-btn">Read More</a>
+								<p>{!! Str::limit($blogs->description, 100) !!}</p>
+								<a href="{{ route('frontend.blog-detail', $blogs->id) }}" class="default-btn">Read More</a>
 							</div>
 						</div>
-						<div class="single-blog-post">
-							<div class="post-image">
-								<a href="blog-details.html">
-									<img src="{{ asset('frontend') }}/assets/img/blog/2.jpg" alt="image">
-								</a>
-							</div>
-							<div class="post-content">
-								<div class="date">
-									<i class="fa fa-calendar"></i> 
-									<span>13 October 2024</span>
-								</div>
-								<h3>
-									<a href="blog-details.html">Seminar for Business Development</a>
-								</h3>
-								<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-								<a href="blog-details.html" class="default-btn">Read More</a>
-							</div>
-						</div>
-						<div class="single-blog-post">
-							<div class="post-image">
-								<a href="blog-details.html">
-									<img src="{{ asset('frontend') }}/assets/img/blog/3.jpg" alt="image">
-								</a>
-							</div>
-							<div class="post-content">
-								<div class="date">
-									<i class="fa fa-calendar"></i> 
-									<span>14 November 2024</span>
-								</div>
-								<h3>
-									<a href="blog-details.html">10 Strategies to Manage Financial Forecast</a>
-								</h3>
-								<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-								<a href="blog-details.html" class="default-btn">Read More</a>
-							</div>
-						</div>
-						<div class="single-blog-post">
-							<div class="post-image">
-								<a href="blog-details.html">
-									<img src="{{ asset('frontend') }}/assets/img/blog/4.jpg" alt="image">
-								</a>
-							</div>
-							<div class="post-content">
-								<div class="date">
-									<i class="fa fa-calendar"></i> 
-									<span>14 November 2024</span>
-								</div>
-								<h3>
-									<a href="blog-details.html">Tips for Achieving Success in Your Business</a>
-								</h3>
-								<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-								<a href="blog-details.html" class="default-btn">Read More</a>
-							</div>
-						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>

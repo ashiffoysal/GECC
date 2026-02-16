@@ -3,7 +3,7 @@
 @section('meta_description', 'Learn')
 @section('content')
 		<!-- Start Page Title Area -->
-		<div class="page-title-area item-bg-1">
+		<div class="page-title-area item-bg-1" style="margin-bottom: 50px;">
 			<div class="container">
 				<div class="page-title-content">
 					<h2>About</h2>

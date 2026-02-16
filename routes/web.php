@@ -8,7 +8,8 @@ use App\Http\Controllers\Backend\FaqController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\EventController;
 use App\Http\Controllers\Backend\SliderController;
-
+use App\Http\Controllers\Backend\TestimonialController;
+use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -105,6 +106,30 @@ Route::controller(SliderController::class)->group(function () {
 });
 
 
+// testimonial
+Route::controller(TestimonialController::class)->group(function () {
+    Route::get('/admin/testimonial', 'index')->name('admin.testimonial.index');
+    Route::get('/admin/testimonial/create', 'create')->name('admin.testimonial.create');        
+    Route::post('/admin/testimonial/store', 'store')->name('admin.testimonial.store');
+    Route::get('/admin/testimonial/edit/{id}', 'edit')->name('admin.testimonial.edit');
+    Route::post('/admin/testimonial/update/{id}', 'update')->name('admin.testimonial.update');
+    Route::get('/admin/testimonial/delete/{id}', 'destroy')->name('admin.testimonial.delete');
+    Route::get('/admin/testimonial/inactive/{id}', 'inactive')->name('admin.testimonial.inactive');
+    Route::get('/admin/testimonial/active/{id}', 'active')->name('admin.testimonial.active');
+});
+
+// partner
+Route::controller(PartnerController::class)->group(function () {
+    Route::get('/admin/partner', 'index')->name('admin.partner.index');
+    Route::get('/admin/partner/create', 'create')->name('admin.partner.create');        
+    Route::post('/admin/partner/store', 'store')->name('admin.partner.store');
+    Route::get('/admin/partner/edit/{id}', 'edit')->name('admin.partner.edit');
+    Route::post('/admin/partner/update/{id}', 'update')->name('admin.partner.update');
+    Route::get('/admin/partner/delete/{id}', 'destroy')->name('admin.partner.delete');
+    Route::get('/admin/partner/inactive/{id}', 'inactive')->name('admin.partner.inactive');
+    Route::get('/admin/partner/active/{id}', 'active')->name('admin.partner.active');
+});
+
 
 
 Route::controller(FrontendController::class)->group(function () {
@@ -122,7 +147,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/partner', 'partner')->name('frontend.partner');
     Route::get('/faq', 'faq')->name('frontend.faq');
     Route::get('/blogs', 'blogs')->name('frontend.blogs');
-    Route::get('/blog/{id}', 'blogDetail')->name('frontend.blog-detail');
+    Route::get('/blog-detail/{id}', 'blogDetail')->name('frontend.blog-detail');
     Route::get('/financial-aids-for-eu-home-students', 'financialAids')->name('frontend.financialAids');
     Route::get('/eligibility', 'eligibility')->name('frontend.eligibility');
 

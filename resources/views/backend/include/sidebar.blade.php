@@ -87,6 +87,18 @@
                                               class="path1"></span><span class="path2"></span></i>Slider Create</a></li>
                               <li><a href="{{ route('admin.slider.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>Slider List</a></li>
+
+
+                                
+                                     <li><a href="{{ route('admin.testimonial.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Testimonial Create</a></li>
+                              <li><a href="{{ route('admin.testimonial.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Testimonial List</a></li>
+                                {{-- partner --}}
+                                 <li><a href="{{ route('admin.partner.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Partner Create</a></li>
+                              <li><a href="{{ route('admin.partner.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Partner List</a></li>
                           </ul>
 
                       </li>

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
 use App\Models\Slider;
+use App\Models\Blog;
+use App\Models\Category;
 
 class FrontendController extends Controller
 {
@@ -73,12 +75,19 @@ class FrontendController extends Controller
     // 
     public function blogs()
     {
-        return view('frontend.blogs.index');
+        $allBlogs=Blog::where('is_deleted',1)->where('is_active',1)->orderBy('id','DESC')->paginate(6);
+        return view('frontend.blogs.index', compact('allBlogs'));
     }
     // other frontend methods will go here
     public function blogDetail($id)
-    {
-        return view('frontend.blogs.detail', compact('id'));
+    {   
+
+        $blogs=Blog::find($id);
+        $popularBlogs=Blog::where('is_deleted',1)->where('is_active',1)->orderBy('id','DESC')->limit(5)->get();
+        $allCategories=Category::where('is_deleted',1)->where('is_active',1)->orderBy('id','DESC')->get();
+      
+        return view('frontend.blogs.details', compact('blogs', 'popularBlogs', 'allCategories'));
+    
     }
 
     // study-options
