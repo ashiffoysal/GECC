@@ -99,6 +99,11 @@
                                               class="path1"></span><span class="path2"></span></i>Partner Create</a></li>
                               <li><a href="{{ route('admin.partner.index') }}"><i class="icon-Commit"><span
                                               class="path1"></span><span class="path2"></span></i>Partner List</a></li>
+
+
+                                     <li><a href="{{ url('/admin/setting/mission') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Mission, Vision & Values</a></li>
+                                          <li><a href="{{ url('/admin/setting/history') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>History</a></li>
+                                                                                  <li><a href="{{ url('/admin/setting/success') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Success</a></li>       
                           </ul>
 
                       </li>

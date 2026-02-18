@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Backend\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -130,12 +131,27 @@ Route::controller(PartnerController::class)->group(function () {
     Route::get('/admin/partner/active/{id}', 'active')->name('admin.partner.active');
 });
 
+// setting
+Route::controller(SettingsController::class)->group(function () {
+    Route::get('/admin/setting/mission', 'mission')->name('admin.setting.mission');
+    Route::post('/admin/setting-mission/update', 'updateMission')->name('admin.setting-mission.update');
+    // history
+    Route::get('/admin/setting/history', 'history')->name('admin.setting.history');
+    Route::post('/admin/setting-history/update', 'updateHistory')->name('admin.setting-history.update');
+    //success
+    Route::get('/admin/setting/success', 'success')->name('admin.setting.success');
+    Route::post('/admin/setting-success/update', 'updateSuccess')->name('admin.setting-success.update');
+});
+    
+
+
+
 
 
 Route::controller(FrontendController::class)->group(function () {
     Route::get('/', 'index')->name('frontend.index');
     Route::get('/about', 'about')->name('frontend.about');
-    Route::get('/our-team', 'ourTeam')->name('frontend.our-team');
+    Route::get('/our-team', 'team')->name('frontend.our-team');
     Route::get('/history', 'history')->name('frontend.history');
     Route::get('/success', 'success')->name('frontend.success');
     
@@ -143,9 +159,10 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::post('/contact', 'submitContactForm')->name('frontend.contact.submit');
     Route::get('/who-we-are', 'whoWeAre')->name('frontend.who-we-are');
+    Route::get('/gallery', 'gallery')->name('frontend.gallery');
     Route::get('/mission', 'mission')->name('frontend.mission');
     Route::get('/partner', 'partner')->name('frontend.partner');
-    Route::get('/faq', 'faq')->name('frontend.faq');
+    Route::get('/faqs', 'faq')->name('frontend.faq');
     Route::get('/blogs', 'blogs')->name('frontend.blogs');
     Route::get('/blog-detail/{id}', 'blogDetail')->name('frontend.blog-detail');
     Route::get('/financial-aids-for-eu-home-students', 'financialAids')->name('frontend.financialAids');
@@ -153,12 +170,14 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::get('/application-support', 'applicationSupport')->name('frontend.application-support');
     Route::get('/want-to-study-abroad', 'wantToStudyAbroad')->name('frontend.want-to-study-abroad');
+    Route::post('/want-to-study-abroad', 'submitWantToStudyAbroadForm')->name('frontend.want-to-study-abroad.submit');
+
     Route::get('/study-options', 'studyOptions')->name('frontend.study-options');
     Route::get('/course-finder', 'courseFinder')->name('frontend.course-finder');
     Route::get('/step-by-step-guideline', 'stepByStepGuideline')->name('frontend.step-by-step-guideline');  
 
     Route::get('/events', 'events')->name('frontend.events');
-    Route::get('/event/{id}', 'eventDetail')->name('frontend.event-detail');
+    Route::get('/event-detail/{id}', 'eventDetail')->name('frontend.event-detail');
 
     Route::get('/application-process', 'applicationProcess')->name('frontend.application-process');
     Route::get('/privacy-policy', 'privacyPolicy')->name('frontend.privacy-policy');

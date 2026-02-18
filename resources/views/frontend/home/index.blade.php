@@ -98,57 +98,7 @@
 		<!-- End Choose Area -->
         @include('frontend.include.whychoiceus')
 		<!-- Start Financial Area -->
-		<section class="financial-area owl-carousel owl-theme">
-			<div class="container-fluid p-0">
-				<div class="row m-0">
-					<div class="col-lg-3 col-sm-6 col-md-6 p-0">
-						<div class="financial-image bg-1">
-							<img src="{{ asset('frontend') }}/assets/img/financial/1.jpg" alt="image">
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-md-6 p-0">
-						<div class="financial-text">
-							<div class="icon">
-								<i class="flaticon-development"></i>
-							</div>
-
-							<h3>Project Management</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-
-							<a href="projects-details.html" class="default-btn">Learn More <span></span></a>
-
-							<div class="shape">
-								<img src="{{ asset('frontend') }}/assets/img/shape/2.png" alt="image">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-md-6 p-0">
-						<div class="financial-image bg-2">
-							<img src="{{ asset('frontend') }}/assets/img/financial/2.jpg" alt="image">
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-md-6 p-0">
-						<div class="financial-text">
-							<div class="icon">
-								<i class="flaticon-interview"></i>
-							</div>
-
-							<h3>Financial Planning</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-
-							<a href="projects-details.html" class="default-btn">Learn More <span></span></a>
-
-							<div class="shape">
-								<img src="{{ asset('frontend') }}/assets/img/shape/2.png" alt="image">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		@include('frontend.include.events')
 		<!-- End Financial Area -->
 
 		<!-- Start Partner Area -->

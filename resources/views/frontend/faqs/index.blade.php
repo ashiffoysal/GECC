@@ -1,12 +1,12 @@
 @extends('layouts.frontend')
-@section('title', 'About Us')
-@section('meta_description', 'Learn')
+@section('title', 'FAQs')
+@section('meta_description', 'Learn about our frequently asked questions.')
 @section('content')
-		<!-- Start Page Title Area -->
-		<div class="page-title-area item-bg-1" style="margin-bottom: 50px;">
+    <!-- Start Page Title Area -->
+		<div class="page-title-area item-bg-1" style="margin-bottom: 40px">
 			<div class="container">
 				<div class="page-title-content">
-					<h2>About</h2>
+					<h2>FAQs</h2>
 					<ul>
 						<li>
 							<a href="{{ url('/') }}">
@@ -14,11 +14,12 @@
 								<i class="fa fa-chevron-right"></i>
 							</a>
 						</li>
-						<li>About</li>
+						<li>FAQs</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-        @include('frontend.include.about')
-        @include('frontend.include.team')
+
+        @include('frontend.include.faq')
+
 @endsection

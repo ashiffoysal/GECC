@@ -8,13 +8,12 @@
 							<span>Team Member</span>
 							<h2>Our Expart Team</h2>
 							<p>Team GECC is composed of dedicated, experienced, and passionate professionals committed to guiding students toward a successful international education journey. Our team works with integrity, transparency, and personalized care to ensure every student receives the best support and accurate guidance. Together, we strive to maintain excellence, build trust, and create opportunities for a brighter future.</p>
-							<a class="default-btn" href="#">Meet the team</a>
+							<a class="default-btn" href="">Meet the team</a>
 						</div>
 					</div>
 					@php
 						$allTeam=App\Models\OurTeam::where('is_active',1)->where('is_deleted',1)->get();
 					@endphp
-						
 					<div class="col-lg-8">
 						<div class="row">
 							<div class="team-wraps owl-carousel owl-theme">

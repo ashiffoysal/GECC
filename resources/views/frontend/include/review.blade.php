@@ -4,6 +4,9 @@
 					<span>Press Coverage</span>
 					<h2>What Our Client Say</h2>
 				</div>
+				@php
+					$allReview=App\Models\Testimonial::where('is_active',1)->get();
+				@endphp
 				<div class="row align-items-center client-bg">
 					<div class="col-lg-6 p-0">
 						<div class="client-img">
@@ -12,12 +15,14 @@
 					</div>
 					<div class="col-lg-6 p-0">
 						<div class="client-details-wrap owl-carousel owl-theme">
+							
+							@foreach ($allReview as $review)
 							<div class="client-details">
-								<img src="{{ asset('frontend') }}/assets/img/client-img/1.jpg" alt="">
-								<h3>Amelia Daniel</h3>
-								<span>Chairman and founder</span>
+								<img src="{{ asset('uploads/testimonial/'.$review->image) }}" alt="">
+								<h3>{{ $review->name }}</h3>
+								<span>{{ $review->designation }}</span>
 								<i class="flaticon-quote"></i>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus  viverra maecenas accumsan lacus vel facilisis.</p>
+								<p>{{ $review->description }}</p>
 								<ul>
 									<li>
 										<i class="fa fa-star"></i>
@@ -36,54 +41,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="client-details">
-								<img src="{{ asset('frontend') }}/assets/img/client-img/2.jpg" alt="">
-								<h3>Alex Mason</h3>
-								<span>Visual Media</span>
-								<i class="flaticon-quote"></i>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus  viverra maecenas accumsan lacus vel facilisis.</p>
-								<ul>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-								</ul>
-							</div>
-							<div class="client-details">
-								<img src="{{ asset('frontend') }}/assets/img/client-img/3.jpg" alt="">
-								<h3>Michael Harper</h3>
-								<span>Sales Manager</span>
-								<i class="flaticon-quote"></i>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus  viverra maecenas accumsan lacus vel facilisis.</p>
-								<ul>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-									<li>
-										<i class="fa fa-star"></i>
-									</li>
-								</ul>
-							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
