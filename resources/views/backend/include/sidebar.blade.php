@@ -102,9 +102,15 @@
 
 
                                      <li><a href="{{ url('/admin/setting/mission') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Mission, Vision & Values</a></li>
-                                          <li><a href="{{ url('/admin/setting/history') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>History</a></li>
-                                                                                  <li><a href="{{ url('/admin/setting/success') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Success</a></li>       
-                          </ul>
+                                    <li><a href="{{ url('/admin/setting/history') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>History</a></li>
+                                    <li><a href="{{ url('/admin/setting/success') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Success</a></li> 
+                                                                    
+                                    <li><a href="{{ route('admin.setting.financial-aid') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Financial Aid</a></li>
+                                    <li><a href="{{ route('admin.setting.eligibility-financial-aid') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Eligibility Financial Aid</a></li>
+                                    <li><a href="{{ route('admin.setting.prerequisites') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Prerequisites</a></li>
+                                    <li><a href="{{ route('admin.setting.application-support') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Application Support</a></li>
+                          
+                                </ul>
 
                       </li>
                   </ul>

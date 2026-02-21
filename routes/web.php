@@ -141,6 +141,21 @@ Route::controller(SettingsController::class)->group(function () {
     //success
     Route::get('/admin/setting/success', 'success')->name('admin.setting.success');
     Route::post('/admin/setting-success/update', 'updateSuccess')->name('admin.setting-success.update');
+
+    Route::get('/admin/setting/financial-aid', 'financialAid')->name('admin.setting.financial-aid');
+    Route::post('/admin/setting-financial-aid/update', 'updateFinancialAid')->name('admin.setting-financial-aid.update');
+
+
+    Route::get('/admin/setting/eligibility-financial-aid', 'eligibilityFinancialAid')->name('admin.setting.eligibility-financial-aid');
+    Route::post('/admin/setting-eligibility-financial-aid/update', 'updateEligibilityFinancialAid')->name('admin.setting-eligibility-financial-aid.update');
+
+
+    Route::get('/admin/setting/prerequisites', 'prerequisites')->name('admin.setting.prerequisites');
+    Route::post('/admin/setting-prerequisites/update', 'updatePrerequisites')->name('admin.setting.prerequisites.update');
+
+
+    Route::get('/admin/setting/application-support', 'applicationSupport')->name('admin.setting.application-support');
+    Route::post('/admin/setting-application-support/update', 'updateApplicationSupport')->name('admin.setting-application-support.update');
 });
     
 
@@ -166,9 +181,9 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('/blogs', 'blogs')->name('frontend.blogs');
     Route::get('/blog-detail/{id}', 'blogDetail')->name('frontend.blog-detail');
     Route::get('/financial-aids-for-eu-home-students', 'financialAids')->name('frontend.financialAids');
-    Route::get('/eligibility', 'eligibility')->name('frontend.eligibility');
+    Route::get('/eligibility-financial-aid', 'eligibility')->name('frontend.eligibility');
 
-    Route::get('/application-support', 'applicationSupport')->name('frontend.application-support');
+    Route::get('/application-support', 'applicationSupportFrontend')->name('frontend.application-support');
     Route::get('/want-to-study-abroad', 'wantToStudyAbroad')->name('frontend.want-to-study-abroad');
     Route::post('/want-to-study-abroad', 'submitWantToStudyAbroadForm')->name('frontend.want-to-study-abroad.submit');
 

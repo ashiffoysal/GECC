@@ -16,6 +16,10 @@ use App\Models\Partner;
 use App\Models\History;
 use App\Models\OurSuccess;
 use App\Models\WantToStudyAbroad;
+use App\Models\FinanCialAid;
+use App\Models\EligibilityFinanCialAid;
+use App\Models\Prerequisites;
+use App\Models\ApplicationSupport;
 
 class FrontendController extends Controller
 {
@@ -76,12 +80,16 @@ class FrontendController extends Controller
     // other frontend methods will go here
     public function eligibility()
     {
-        return view('frontend.eligibility.index');
+            $eligibility_financial_aid = EligibilityFinanCialAid::first();
+            return view('frontend.eligibility.index', compact('eligibility_financial_aid'));
+        
     }
     // 
     public function financialAids()
     {
-        return view('frontend.financial-aids.index');
+        $financial_aid = FinanCialAid::first();
+         return view('frontend.financial-aid.index', compact('financial_aid'));
+    
     }
     // 
     public function blogs()
@@ -216,6 +224,20 @@ class FrontendController extends Controller
                 }
     
     }
+
+    // prerequisitesToStudyAbroad
+        public function prerequisitesToStudyAbroad()
+        { 
+            $Prerequisites = Prerequisites::first();
+            return view('frontend.prerequisites.index', compact('Prerequisites'));
+        }
+
+        // applicationSupport
+        public function applicationSupportFrontend()
+        { 
+            $application_support = ApplicationSupport::first();
+            return view('frontend.application-support.index', compact('application_support'));
+        }
 
 
 }

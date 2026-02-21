@@ -66,8 +66,22 @@
 										<a href="#" class="nav-link dropdown-toggle">Study Aboard</a>
 										<ul class="dropdown-menu dropdown-style">
 											<li class="nav-item">
+												<a href="{{ url('/application-support') }}" class="nav-link">Application Support</a>
+											</li>
+											<li class="nav-item">
 												<a href="{{ url('/study') }}" class="nav-link">Study Option</a>
 											</li>
+											<li class="nav-item">
+												<a href="{{ url('/financial-aids-for-eu-home-students') }}" class="nav-link">Financial Aid</a>
+											</li>
+												<li class="nav-item">
+												<a href="{{ url('/eligibility-financial-aid') }}" class="nav-link">Eligibility Financial Aid</a>
+											</li>
+											<li class="nav-item">
+												<a href="{{ url('/prerequisites-to-study-abroad') }}" class="nav-link">Prerequisites to study abroad</a>
+											</li>
+											
+											
 											<li class="nav-item">
 												<a href="{{ url('/course-finder') }}" class="nav-link">Course Finder</a>
 											</li>
