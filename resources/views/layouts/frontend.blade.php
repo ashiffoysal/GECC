@@ -30,7 +30,7 @@
 		<!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('frontend') }}/assets/img/favicon.png">
         <!-- Title -->
-        <title>Peru - Consulting HTML Template</title>
+        <title>GECC</title>
     </head>
     <body>
 		<!-- Start Preloader Area -->
