@@ -131,6 +131,41 @@ Route::controller(PartnerController::class)->group(function () {
     Route::get('/admin/partner/active/{id}', 'active')->name('admin.partner.active');
 });
 
+// level
+Route::controller(App\Http\Controllers\Backend\LevelController::class)->group(function () {
+    Route::get('/admin/level', 'index')->name('admin.level.index');
+    Route::get('/admin/level/create', 'create')->name('admin.level.create');        
+    Route::post('/admin/level/store', 'store')->name('admin.level.store');
+    Route::get('/admin/level/edit/{id}', 'edit')->name('admin.level.edit');
+    Route::post('/admin/level/update/{id}', 'update')->name('admin.level.update');
+    Route::get('/admin/level/delete/{id}', 'destroy')->name('admin.level.delete');
+    Route::get('/admin/level/inactive/{id}', 'deactive')->name('admin.level.inactive');
+    Route::get('/admin/level/active/{id}', 'active')->name('admin.level.active');
+});
+// university
+Route::controller(App\Http\Controllers\Backend\UniversityController::class)->group(function () {
+    Route::get('/admin/university', 'index')->name('admin.university.index');
+    Route::get('/admin/university/create', 'create')->name('admin.university.create');        
+    Route::post('/admin/university/store', 'store')->name('admin.university.store');
+    Route::get('/admin/university/edit/{id}', 'edit')->name('admin.university.edit');
+    Route::post('/admin/university/update/{id}', 'update')->name('admin.university.update');
+    Route::get('/admin/university/delete/{id}', 'destroy')->name('admin.university.delete');
+    Route::get('/admin/university/inactive/{id}', 'deactive')->name('admin.university.inactive');
+    Route::get('/admin/university/active/{id}', 'active')->name('admin.university.active');
+});
+
+
+// subjects
+Route::controller(App\Http\Controllers\Backend\SubjectController::class)->group(function () {
+    Route::get('/admin/subject', 'index')->name('admin.subject.index');
+    Route::get('/admin/subject/create', 'create')->name('admin.subject.create');        
+    Route::post('/admin/subject/store', 'store')->name('admin.subject.store');
+    Route::get('/admin/subject/edit/{id}', 'edit')->name('admin.subject.edit');
+    Route::post('/admin/subject/update/{id}', 'update')->name('admin.subject.update');
+    Route::get('/admin/subject/delete/{id}', 'destroy')->name('admin.subject.delete');
+    Route::get('/admin/subject/inactive/{id}', 'deactive')->name('admin.subject.inactive');
+    Route::get('/admin/subject/active/{id}', 'active')->name('admin.subject.active');
+});
 // setting
 Route::controller(SettingsController::class)->group(function () {
     Route::get('/admin/setting/mission', 'mission')->name('admin.setting.mission');
@@ -145,14 +180,11 @@ Route::controller(SettingsController::class)->group(function () {
     Route::get('/admin/setting/financial-aid', 'financialAid')->name('admin.setting.financial-aid');
     Route::post('/admin/setting-financial-aid/update', 'updateFinancialAid')->name('admin.setting-financial-aid.update');
 
-
     Route::get('/admin/setting/eligibility-financial-aid', 'eligibilityFinancialAid')->name('admin.setting.eligibility-financial-aid');
     Route::post('/admin/setting-eligibility-financial-aid/update', 'updateEligibilityFinancialAid')->name('admin.setting-eligibility-financial-aid.update');
 
-
     Route::get('/admin/setting/prerequisites', 'prerequisites')->name('admin.setting.prerequisites');
     Route::post('/admin/setting-prerequisites/update', 'updatePrerequisites')->name('admin.setting.prerequisites.update');
-
 
     Route::get('/admin/setting/application-support', 'applicationSupport')->name('admin.setting.application-support');
     Route::post('/admin/setting-application-support/update', 'updateApplicationSupport')->name('admin.setting-application-support.update');
@@ -188,6 +220,8 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('/want-to-study-abroad', 'submitWantToStudyAbroadForm')->name('frontend.want-to-study-abroad.submit');
 
     Route::get('/study-options', 'studyOptions')->name('frontend.study-options');
+    Route::get('/study-options/{id}', 'studyOptionsDetails')->name('frontend.study-options.show');
+
     Route::get('/course-finder', 'courseFinder')->name('frontend.course-finder');
     Route::get('/step-by-step-guideline', 'stepByStepGuideline')->name('frontend.step-by-step-guideline');  
 

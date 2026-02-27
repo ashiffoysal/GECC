@@ -17,6 +17,7 @@ use App\Models\History;
 use App\Models\OurSuccess;
 use App\Models\WantToStudyAbroad;
 use App\Models\FinanCialAid;
+use App\Models\Level;
 use App\Models\EligibilityFinanCialAid;
 use App\Models\Prerequisites;
 use App\Models\ApplicationSupport;
@@ -111,9 +112,14 @@ class FrontendController extends Controller
     // study-options
     public function studyOptions()
     {
-        return view('frontend.study-options.index');
+        $allLevels=Level::where('is_deleted',1)->where('is_active',1)->orderBy('id','DESC')->get();
+        return view('frontend.study-options.index', compact('allLevels'));
     }
-
+    public function studyOptionsDetails($id)
+    {
+        $level=Level::find($id);
+        return view('frontend.study-options.details', compact('level'));
+    }
     // events
     public function events()
     {
@@ -237,6 +243,13 @@ class FrontendController extends Controller
         { 
             $application_support = ApplicationSupport::first();
             return view('frontend.application-support.index', compact('application_support'));
+        }
+
+
+        // course finder
+        public function courseFinder()
+        {           
+             return view('frontend.course-finder.index');
         }
 
 

@@ -38,6 +38,51 @@
                               </li>
                           </ul>
                       </li>
+                    <li class="treeview">
+                          <a href="#">
+                              <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
+                              <span>University</span>
+                              <span class="pull-right-container">
+                                  <i class="fa fa-angle-right pull-right"></i>
+                              </span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ route('admin.university.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>University Create</a></li>
+                              <li><a href="{{ route('admin.university.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>University List</a></li>
+                          </ul>
+                      </li>
+                             <li class="treeview">
+                          <a href="#">
+                              <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
+                              <span>Subject</span>
+                              <span class="pull-right-container">
+                                  <i class="fa fa-angle-right pull-right"></i>
+                              </span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ route('admin.subject.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Subject Create</a></li>
+                              <li><a href="{{ route('admin.subject.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Subject List</a></li>
+                          </ul>
+                      </li>
+                    <li class="treeview">
+                          <a href="#">
+                              <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
+                              <span>Level</span>
+                              <span class="pull-right-container">
+                                  <i class="fa fa-angle-right pull-right"></i>
+                              </span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ route('admin.level.create') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Level Create</a></li>
+                              <li><a href="{{ route('admin.level.index') }}"><i class="icon-Commit"><span
+                                              class="path1"></span><span class="path2"></span></i>Level List</a></li>
+                          </ul>
+                      </li>
                       <li class="treeview">
                           <a href="#">
                               <i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>

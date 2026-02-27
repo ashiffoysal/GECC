@@ -69,7 +69,7 @@
 												<a href="{{ url('/application-support') }}" class="nav-link">Application Support</a>
 											</li>
 											<li class="nav-item">
-												<a href="{{ url('/study') }}" class="nav-link">Study Option</a>
+												<a href="{{ url('/study-options') }}" class="nav-link">Study Option</a>
 											</li>
 											<li class="nav-item">
 												<a href="{{ url('/financial-aids-for-eu-home-students') }}" class="nav-link">Financial Aid</a>
@@ -99,7 +99,7 @@
 										
 									</li>
 									<li class="nav-item">
-										<a href="{{ url('/partners') }}" class="nav-link">Partners</a>
+										<a href="{{ route('frontend.partner') }}" class="nav-link">Partners</a>
 										
 									</li>
 									<li class="nav-item">
