@@ -59,6 +59,7 @@ class SubjectController extends Controller
         $subject->Course_Credits = $request->course_credits;
         $subject->Total_Semester = $request->total_semester;
         $subject->Total_Students = $request->total_students;
+        $subject->method_of_study = $request->method_of_study;
 
             // image upload
             if ($request->hasFile('image')) {
@@ -110,6 +111,7 @@ class SubjectController extends Controller
         $subject->Course_Credits = $request->course_credits;
         $subject->Total_Semester = $request->total_semester;
         $subject->Total_Students = $request->total_students;
+        $subject->method_of_study = $request->method_of_study;
 
             // image upload
             if ($request->hasFile('image')) {

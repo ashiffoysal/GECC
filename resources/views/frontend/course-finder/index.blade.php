@@ -1,323 +1,171 @@
 @extends('layouts.frontend')
-@section('title', 'Contact Us')
+@section('title', 'Course Finder')
 @section('meta_description', 'Learn')
 @section('content')
+    <div class="page-title-area item-bg-2">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Course Finder</h2>
+                <ul>
+                    <li>
+                        <a href="{{ url('/') }}">
+                            Home
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>Course Finder</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+        .course-search-wrapper {
+            background: #f3f6f8;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+            border: 6px solid #9acb6b;
+        }
 
-		<!-- Start Page Title Area -->
-		<div class="page-title-area item-bg-2">
-			<div class="container">
-				<div class="page-title-content">
-					<h2>Blog Right Sidebar</h2>
-					<ul>
-						<li>
-							<a href="index.html">
-								Home 
-								<i class="fa fa-chevron-right"></i>
-							</a>
-						</li>
-						<li>Blog Right Sidebar</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- End Page Title Area -->
+        .course-search-wrapper label {
+            font-weight: 600;
+            color: #0d4f80;
+            margin-bottom: 6px;
+        }
 
-		<!-- Start Blog Details Area -->
-        <section class="blog-details-area ptb-100">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-12">
-						<div class="blog-details-desc">
-							<div class="row">
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/1.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>12 September 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">Successful Growth In Business 2024</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/2.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>13 October 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">Achieving Best Business Awards</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/3.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>14 November 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">Seminar for Best Marketing Strategy</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/4.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>14 November 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">Seminar for Business Development</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/5.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>14 November 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">10 Strategies to Manage Financial Forecast</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="single-blog-post">
-										<div class="post-image">
-											<a href="blog-details.html">
-												<img src="assets/img/blog/6.jpg" alt="image">
-											</a>
-										</div>
-										<div class="post-content">
-											<div class="date">
-												<i class="fa fa-calendar"></i> 
-												<span>14 November 2024</span>
-											</div>
-											<h3>
-												<a href="blog-details.html">Tips for Achieving Success in Your Business</a>
-											</h3>
-											<p>Luis ipsum suspendisse ultrices. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-											<a href="blog-details.html" class="default-btn">Read More</a>
-										</div>
-									</div>
-								</div>
+        .course-search-wrapper .form-select {
+            height: 48px;
+            border-radius: 10px;
+            border: 1px solid #dcdcdc;
+            transition: all 0.3s ease;
+        }
 
-								<div class="col-lg-12">
-									<div class="pagenavigation-area">
-										<nav aria-label="Page navigation example text-center">
-											<ul class="pagination">
-												<li class="page-item">
-													<a class="page-link page-links" href="blog-right-sidebar.html">
-														<i class="fa fa-angle-double-left"></i>
-													</a>
-												</li>
-												<li class="page-item active">
-													<a class="page-link" href="blog-right-sidebar.html">1</a>
-												</li>
-												<li class="page-item">
-													<a class="page-link" href="blog-right-sidebar.html">2</a>
-												</li>
-												<li class="page-item">
-													<a class="page-link" href="blog-right-sidebar.html">3</a>
-												</li>
-												<li class="page-item">
-													<a class="page-link" href="blog-right-sidebar.html">
-														<i class="fa fa-angle-double-right"></i>
-													</a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+        .course-search-wrapper .form-select:focus {
+            border-color: #0d4f80;
+            box-shadow: 0 0 0 0.2rem rgba(13, 79, 128, 0.15);
+        }
 
-					<div class="col-lg-4 col-md-12">
-						<aside class="widget-area" id="secondary">
-							<div class="widget widget_search mt-3">
-								<form class="search-form">
-									<label>
-										<span class="screen-reader-text">Search for:</span>
-										<input type="search" class="search-field" placeholder="Search...">
-									</label>
-									<button type="submit"><i class="fa fa-search"></i></button>
-								</form>
-							</div>
+        .search-btn {
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0d4f80, #1673b1);
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: none;
+            transition: all 0.3s ease;
+        }
 
-							<section class="widget widget-peru-posts-thumb">
-								<h3 class="widget-title">Popular Posts</h3>
-								<article class="item">
-									<a href="blog-details.html" class="thumb">
-										<span class="fullimage cover bg1" role="img"></span>
-									</a>
-									<div class="info">
-										<time datetime="2024-06-30">June 30, 2024</time>
-										<h4 class="title usmall">
-											<a href="blog-details.html">Successful Growth In Business 2018</a>
-										</h4>
-									</div>
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(13, 79, 128, 0.25);
+        }
+            .page-title-area {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+    </style>
 
-									<div class="clear"></div>
-								</article>
+   <div class="container mt-5 mb-5">
 
-								<article class="item">
-									<a href="blog-details.html" class="thumb">
-										<span class="fullimage cover bg2" role="img"></span>
-									</a>
-									<div class="info">
-										<time datetime="2024-06-30">June 30, 2024</time>
-										<h4 class="title usmall">
-											<a href="blog-details.html">Achieving Best Business Awards</a>
-										</h4>
-									</div>
+    <!-- 🔍 Search Form -->
+    <form id="courseSearchForm" class="row g-4 align-items-end">
 
-									<div class="clear"></div>
-								</article>
+        <div class="col-md-4">
+            <select name="level_id" class="form-control">
+                <option value="">Level Select</option>
+                @foreach ($allLevels as $level)
+                    <option value="{{ $level->id }}">{{ $level->title }}</option>
+                @endforeach
+            </select>
+        </div>
 
-								<article class="item">
-									<a href="blog-details.html" class="thumb">
-										<span class="fullimage cover bg3" role="img"></span>
-									</a>
-									<div class="info">
-										<time datetime="2024-06-30">June 30, 2024</time>
-										<h4 class="title usmall">
-											<a href="blog-details.html">Seminar for Best Marketing Strategy</a>
-										</h4>
-									</div>
+        <div class="col-md-4">
+            <select name="study_method" class="form-control">
+                <option value="">Method of Study</option>
+                <option value="full_time">Full Time</option>
+                <option value="part_time">Part Time</option>
+                <option value="online">Online</option>
+            </select>
+        </div>
 
-									<div class="clear"></div>
-								</article>
-								
-								<article class="item">
-									<a href="blog-details.html" class="thumb">
-										<span class="fullimage cover bg4" role="img"></span>
-									</a>
-									<div class="info">
-										<time datetime="2024-06-30">June 30, 2024</time>
-										<h4 class="title usmall">
-											<a href="blog-details.html">Achieving Best Business Awards</a>
-										</h4>
-									</div>
+        <div class="col-md-4">
+            <select name="start_date" class="form-control">
+                <option value="">Start Date</option>
+                <option value="january">January 2026</option>
+                <option value="may">May 2026</option>
+                <option value="september">September 2026</option>
+            </select>
+        </div>
 
-									<div class="clear"></div>
-								</article>
-							</section>
+        <div class="col-md-4">
+            <select name="subject_id" class="form-control">
+                <option value="">Subjects</option>
+                @foreach ($allSubjects as $subject)
+                    <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+                @endforeach
+            </select>
+        </div>
 
-							<section class="widget widget_categories">
-								<h3 class="widget-title">Archives</h3>
+        <div class="col-md-4">
+            <select name="university_id" class="form-control">
+                <option value="">University</option>
+                @foreach ($allUniversities as $university)
+                    <option value="{{ $university->id }}">{{ $university->name }}</option>
+                @endforeach
+            </select>
+        </div>
 
-								<ul>
-									<li>
-										<a href="blog-details.html">May <span>2024</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">April <span>2024</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">June <span>2024</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">july <span>2024</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">August <span>2024</span></a>
-									</li>
-								</ul>
-							</section>
-							
-							<section class="widget widget_categories">
-								<h3 class="widget-title">Categories</h3>
+        <div class="col-md-4">
+            <button type="submit" class="default-btn">SEARCH NOW</button>
+        </div>
 
-								<ul>
-									<li>
-										<a href="blog-details.html">Business <span>(10)</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">Consulting <span>(20)</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">Investment <span>(10)</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">Marketing <span>(12)</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">Seminar <span>(16)</span></a>
-									</li>
-									<li>
-										<a href="blog-details.html">Strategies <span>(17)</span></a>
-									</li>
-								</ul>
-							</section>
+    </form>
 
-							<section class="widget widget_tag_cloud">
-								<h3 class="widget-title">Tags</h3>
+    <hr>
 
-								<div class="tagcloud">
-									<a href="blog-details.html">Business</a>
-									<a href="blog-details.html">Consulting</a>
-									<a href="blog-details.html">Financial Support</a>
-									<a href="blog-details.html">Investment</a>
-									<a href="blog-details.html">Marketing</a>
-									<a href="blog-details.html">Seminar</a>
-									<a href="blog-details.html">Travel</a>
-									<a href="blog-details.html">Consulting</a>
-								</div>
-							</section>
-						</aside>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Blog Details Area -->
+    <!-- 📚 Course Result -->
+    <div class="row" id="courseResult">
+        @include('frontend.course-finder.partials.course_list')
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    // Search Submit
+    $('#courseSearchForm').on('submit', function(e){
+        e.preventDefault();
+
+        $.ajax({
+            url: "{{ route('course.search') }}",
+            type: "GET",
+            data: $(this).serialize(),
+            success: function(data){
+                $('#courseResult').html(data);
+            }
+        });
+    });
+
+    // Pagination
+    $(document).on('click', '.pagination a', function(e){
+        e.preventDefault();
+
+        let url = $(this).attr('href');
+
+        $.ajax({
+            url: url,
+            success: function(data){
+                $('#courseResult').html(data);
+            }
+        });
+    });
+
+});
+</script>
 
 @endsection

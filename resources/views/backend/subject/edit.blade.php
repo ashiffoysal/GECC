@@ -69,6 +69,22 @@
                                             @enderror
                                         </div>
                                     </div>
+                                     <div class="col-lg-12 col-12">
+                                        <div class="form-group">
+                                            <label for="method_of_study" class="form-label">Method Of Study</label>
+                                            <select name="method_of_study" id="method_of_study" class="form-control">
+                                                <option value="">Select Method Of Study</option>
+                                               
+                                                    <option value="full_time" {{ $data->method_of_study == 'full_time' ? 'selected' : '' }}>Full Time</option>
+                                                    <option value="part_time" {{ $data->method_of_study == 'part_time' ? 'selected' : '' }}>Part Time</option>
+                                                    <option value="online" {{ $data->method_of_study == 'online' ? 'selected' : '' }}>Online</option>
+                                            
+                                            </select>
+                                            @error('method_of_study')
+                                            <div class="alert-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     <div class="col-lg-12 col-12">
                                         <div class="form-group">
                                             <label for="description" class="form-label">Subject Description</label>

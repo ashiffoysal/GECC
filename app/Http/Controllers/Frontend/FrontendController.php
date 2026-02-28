@@ -21,6 +21,13 @@ use App\Models\Level;
 use App\Models\EligibilityFinanCialAid;
 use App\Models\Prerequisites;
 use App\Models\ApplicationSupport;
+use App\Models\Subjects;
+use App\Models\University;
+use App\Models\Country;
+use App\Models\CandidateApplication;
+use Carbon\Carbon;
+
+
 
 class FrontendController extends Controller
 {
@@ -248,9 +255,151 @@ class FrontendController extends Controller
 
         // course finder
         public function courseFinder()
-        {           
-             return view('frontend.course-finder.index');
+        {    
+            
+            $allCourses=Subjects::where('is_active',1)->orderBy('id','DESC')->paginate(10);
+            $allSubjects=Subjects::where('is_active',1)->orderBy('id','DESC')->get();
+           
+
+            $allLevels=Level::where('is_active',1)->orderBy('id','DESC')->get();
+
+
+
+            $allUniversities = University::where('is_active',1)
+            ->withCount(['subjects' => function($query){
+                $query->where('is_active',1);
+            }])
+            ->orderBy('id','DESC')
+            ->get();
+            return view('frontend.course-finder.index', compact('allCourses','allSubjects','allUniversities','allLevels'));
         }
 
+        // couse apply
+        public function courseApply($id)
+        {   
+            $course = Subjects::find($id);
+            $universities = University::orderBy('id', 'ASC')->get();
+            $levels = Level::orderBy('id', 'ASC')->get();
+            $countries = Country::orderBy('id', 'ASC')->get();
+            $allSubject = Subjects::where('is_active',1)->get();
+            return view('frontend.course-finder.apply', compact('course','universities','levels','countries','allSubject'));
+        }
+
+
+        // application submit
+        public function submitCourseApplication(Request $request)
+        {            // Validate the form data
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'phone' => 'required|string|max:20',
+                'country' => 'required|string|max:255',
+                'application_type' => 'required|string|max:255',
+                'subject' => 'required|string|max:255',
+                'university' => 'required|string|max:255',
+                'passing_year' => 'required|integer',
+                'major_subjects' => 'required|string',
+            ]);
+            // Insert Data
+            $insert = ApplicationSupport::insert([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'home_phone'=> $request->home_phone,
+                'address' => $request->address,
+                'post_code' => $request->post_code,
+                'english_proficiency' => $request->english_proficiency,
+                'study_gap' => $request->study_gap,
+                'passing_year' => $request->passing_year,
+                'country' => $request->country,
+                'application_type' => $request->application_type,
+                'subject' => $request->subject,
+                'university' => $request->university,
+                'major_subjects' => $request->major_subjects,
+            ]);
+            if ($insert) {
+                return redirect()->back()->with('success', 'Your application has been submitted successfully!');
+            } else {
+                return redirect()->back()->with('error', 'There was an error submitting your application. Please try again later.');
+            }
+
+        }
+
+        // course application submit
+
+
+        public function courseApplySubmit(Request $request, $id)
+        {
+
+            // Validate the form data
+            $request->validate([
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'phone' => 'required|string|max:20',
+                'qualification' => 'required|string|max:255',
+                'english_test' => 'required|string|max:255',
+                'preferred_country' => 'required|string|max:255',
+                'study_level' => 'required|string|max:255',
+                'preferred_university' => 'required|string|max:255',
+                'personal_statement' => 'required|string',
+            ]);
+            // Insert Data
+            $insert = CandidateApplication::insert([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'qualification' => $request->qualification,
+                'english_test' => $request->english_test,
+                'preferred_country' => $request->preferred_country,
+                'study_level' => $request->study_level,
+                'preferred_university' => $request->preferred_university,
+                'personal_statement' => $request->personal_statement,
+                'created_at' => Carbon::now()->toDateTimeString(),
+            ]);
+            if ($insert) {
+               return response()->json([
+                    'status' => true,
+                    'message' => 'Application submitted successfully!'
+                ]);
+                            } else {
+                            return response()->json([
+                    'status' => false,
+                    'message' => 'Application submission failed. Please try again.'
+                ]);
+                            }
+        }
+
+
+        // course search
+       public function search(Request $request)
+            {   
+                $query = Subjects::with('alluniversity');
+
+                if ($request->level_id) {
+                    $query->where('level', $request->level_id);
+                }
+
+                if ($request->study_method) {
+                    $query->where('method_of_study', $request->study_method);
+                }
+
+                if ($request->subject_id) {
+                    $query->where('id', $request->subject_id);
+                }
+
+                if ($request->university_id) {
+                    $query->where('university', $request->university_id);
+                }
+
+                $allCourses = $query->paginate(100)->appends($request->all());
+
+                if ($request->ajax()) {
+                    return view('frontend.course-finder.partials.course_list', compact('allCourses'))->render();
+                }
+
+                return view('frontend.course-finder.index', compact('allCourses'));
+            }
 
 }

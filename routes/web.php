@@ -154,7 +154,6 @@ Route::controller(App\Http\Controllers\Backend\UniversityController::class)->gro
     Route::get('/admin/university/active/{id}', 'active')->name('admin.university.active');
 });
 
-
 // subjects
 Route::controller(App\Http\Controllers\Backend\SubjectController::class)->group(function () {
     Route::get('/admin/subject', 'index')->name('admin.subject.index');
@@ -234,6 +233,11 @@ Route::controller(FrontendController::class)->group(function () {
 
     Route::get('/free-consultant', 'freeConsultant')->name('frontend.free-consultant');
     Route::get('/prerequisites-to-study-abroad', 'prerequisitesToStudyAbroad')->name('frontend.prerequisites-to-study-abroad');
+
+    Route::get('/course/apply/{id}', 'courseApply')->name('frontend.course.apply');
+    Route::post('/course/apply/{id}', 'courseApplySubmit')->name('frontend.course.apply.submit');
+
+    Route::get('/course-search', 'search')->name('course.search');
     
 });
    
