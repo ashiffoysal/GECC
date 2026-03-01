@@ -86,10 +86,10 @@
 												<a href="{{ url('/course-finder') }}" class="nav-link">Course Finder</a>
 											</li>
 											<li class="nav-item">
-												<a href="{{ url('/step') }}" class="nav-link">Step By Step Guideline</a>
+												<a href="{{ url('/step-by-step-process') }}" class="nav-link">Step By Step Guideline</a>
 											</li>
 											<li class="nav-item">
-												<a href="{{ url('/free-counselling') }}" class="nav-link">Free Online Counselling</a>
+												<a href="{{ url('/free-career-consultant') }}" class="nav-link">Free Online Counselling</a>
 											</li>
 											
 										</ul>
@@ -111,7 +111,7 @@
 										<i class="fa fa-phone"></i> 
 										{{ $company_information->phone }}
 									</a>
-									<a class="default-btn" href="{{ url('/contact') }}">
+									<a class="default-btn" href="{{ url('/free-career-consultant') }}">
 										Free Consultation
 									</a>
 								</div>

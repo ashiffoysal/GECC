@@ -223,11 +223,14 @@ Route::controller(FrontendController::class)->group(function () {
     
     Route::get('/contact', 'contact')->name('frontend.contact');
 
+ Route::get('/step-by-step-process', 'stepByStepProcess')->name('frontend.step-by-step-process');
+
     Route::post('/contact', 'submitContactForm')->name('frontend.contact.submit');
     Route::get('/who-we-are', 'whoWeAre')->name('frontend.who-we-are');
     Route::get('/gallery', 'gallery')->name('frontend.gallery');
     Route::get('/mission', 'mission')->name('frontend.mission');
     Route::get('/partner', 'partner')->name('frontend.partner');
+    Route::get('/partner/details/{id}', 'partnerDetails')->name('frontend.partner.details');
     Route::get('/faqs', 'faq')->name('frontend.faq');
     Route::get('/blogs', 'blogs')->name('frontend.blogs');
     Route::get('/blog-detail/{id}', 'blogDetail')->name('frontend.blog-detail');

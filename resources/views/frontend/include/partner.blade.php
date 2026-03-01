@@ -13,7 +13,7 @@
                      @endphp
                      @foreach ($allPartner as $partner)
                          <div class="single-logo">
-                             <a href="{{ $partner->site_link }}" target="_blank">
+                             <a href="{{ route('frontend.partner.details', $partner->id) }}" target="_blank">
                                  <img src="{{ asset($partner->image) }}" alt="Partner">
                              </a>
                          </div>

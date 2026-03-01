@@ -81,6 +81,12 @@ class FrontendController extends Controller
     {
         return view('frontend.partner.index');
     }
+    // partner details
+    public function partnerDetails($id)
+    {
+        $partner=Partner::find($id);
+        return view('frontend.partner.details', compact('partner'));
+    }
     // 
     public function whyChoiceUs()
     {
@@ -407,6 +413,12 @@ class FrontendController extends Controller
     public function freeCareerConsultant()
     {        $career = FreeCareerConsultant::first();
         return view('frontend.free-career-consultant.index', compact('career'));
+    }
+
+    // step by step process
+    public function stepByStepProcess()
+    {       
+        return view('frontend.step.index');
     }
 
 }
