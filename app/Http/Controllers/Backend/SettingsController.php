@@ -11,6 +11,7 @@ use App\Models\FinanCialAid;
 use App\Models\EligibilityFinanCialAid;
 use App\Models\Prerequisites;
 use App\Models\ApplicationSupport;
+use App\Models\FreeCareerConsultant;
 
 class SettingsController extends Controller
 {
@@ -262,4 +263,39 @@ class SettingsController extends Controller
         return redirect()->back()->with('success', 'Application Support updated successfully.');
     }
 
+    // free career consultant
+    public function freeCareerConsultant()
+    {        $carrer = FreeCareerConsultant::first();
+        return view('backend.free_career_cosultant.index', compact('carrer'));
+    }
+    // 
+    // update free career consultant
+    public function updateFreeCareerConsultant(Request $request)
+    {        $carrer = FreeCareerConsultant::first();
+        if ($carrer) {
+            $carrer->title = $request->title;
+            $carrer->description = $request->details;
+            $carrer->meeting_link = $request->meeting_link;
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                $image->move(public_path('uploads/free_career_consultant'), $imageName);
+                $carrer->image = 'uploads/free_career_consultant/' . $imageName;
+            }
+            $carrer->save();
+        } else {
+            $carrer = new FreeCareerConsultant();
+            $carrer->title = $request->title;
+            $carrer->description = $request->details;
+            $carrer->meeting_link = $request->meeting_link;
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                $image->move(public_path('uploads/free_career_consultant'), $imageName);
+                $carrer->image = 'uploads/free_career_consultant/' . $imageName;
+            }
+            $carrer->save(); 
+        }
+        return redirect()->back()->with('success', 'Free Career Consultant updated successfully.');
+    }
 }

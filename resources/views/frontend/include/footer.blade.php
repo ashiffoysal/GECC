@@ -61,7 +61,7 @@
 									<a href="{{ route('frontend.mission') }}">Our Mission</a>
 								</li>
 								<li>
-									<a href="{{ route('frontend.course-finder') }}">course Finder</a>
+									<a href="{{ route('frontend.course-finder') }}">Course Finder</a>
 								</li>
 								<li>
 									<a href="{{ route('frontend.application-support') }}">Application Support</a>
@@ -77,10 +77,10 @@
 									<a href="{{ route('frontend.contact') }}">Contact Us</a>
 								</li>
 									<li>
-									<a href="{{ route('frontend.privacy-policy') }}">Privacy Policy</a>
+									<a href="{{ url('our-team') }}">Our Team</a>
 								</li>
 								<li>
-									<a href="{{ route('frontend.terms-and-conditions') }}">Terms & Conditions</a>
+									<a href="{{ url('/gallery') }}">Gallery</a>
 								</li>
 								<li>
 									<a href="{{ route('frontend.blogs') }}">Blogs</a>

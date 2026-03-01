@@ -24,7 +24,7 @@
 								</li>
 
 								<li class="nav-item">
-									<a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">
+									<a class="nav-link" id="" >
 										<i class="flaticon-hand"></i>
 										Engineering
 									</a>
@@ -32,14 +32,14 @@
 
 								<li class="nav-item">
 									<i class="flaticon-tracking"></i>
-									<a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">
+									<a class="nav-link" >
 										<i class="flaticon-strategy"></i>
 										Law
 									</a>
 								</li>
 
 								<li class="nav-item">
-									<a class="nav-link" id="pills-4-tab" data-bs-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
+									<a class="nav-link">
 										<i class="flaticon-consultant"></i>
 										Business & Management
 									</a>

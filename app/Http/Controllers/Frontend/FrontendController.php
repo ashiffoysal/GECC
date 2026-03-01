@@ -25,6 +25,7 @@ use App\Models\Subjects;
 use App\Models\University;
 use App\Models\Country;
 use App\Models\CandidateApplication;
+use App\Models\FreeCareerConsultant;
 use Carbon\Carbon;
 
 
@@ -181,7 +182,7 @@ class FrontendController extends Controller
         ]);
         // Send a success response back to the frontend
         if($insert){
-            return redirect()->back()->with('success', 'Your message has been sent successfully!');
+            return redirect()->back()->with('success', 'Application Submitted Successfully!');
         }else{
             return redirect()->back()->with('error', 'There was an error sending your message. Please try again later.');
         }
@@ -401,5 +402,11 @@ class FrontendController extends Controller
 
                 return view('frontend.course-finder.index', compact('allCourses'));
             }
+
+    // free career consultant
+    public function freeCareerConsultant()
+    {        $career = FreeCareerConsultant::first();
+        return view('frontend.free-career-consultant.index', compact('career'));
+    }
 
 }

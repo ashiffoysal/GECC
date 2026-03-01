@@ -165,6 +165,23 @@ Route::controller(App\Http\Controllers\Backend\SubjectController::class)->group(
     Route::get('/admin/subject/inactive/{id}', 'deactive')->name('admin.subject.inactive');
     Route::get('/admin/subject/active/{id}', 'active')->name('admin.subject.active');
 });
+
+
+// contact message
+Route::controller(App\Http\Controllers\Backend\ContactMessageController::class)->group(function () {
+    Route::get('/admin/contact-message', 'index')->name('admin.contact-message.index');
+    Route::get('/admin/contact-message/delete/{id}', 'destroy')->name('admin.contact.delete');
+});
+
+// contact message
+Route::controller(App\Http\Controllers\Backend\AllApplicationController::class)->group(function () {
+    Route::get('/admin/all-application', 'index')->name('admin.all-application.index');
+    Route::get('/admin/all-application/view/{id}', 'view')->name('admin.all-application.view');
+    Route::get('/admin/all-application/delete/{id}', 'destroy')->name('admin.all-application.delete');
+    Route::post('/admin/all-application/notes/update', 'updateNotes')->name('notes.update');
+    
+
+});
 // setting
 Route::controller(SettingsController::class)->group(function () {
     Route::get('/admin/setting/mission', 'mission')->name('admin.setting.mission');
@@ -187,6 +204,9 @@ Route::controller(SettingsController::class)->group(function () {
 
     Route::get('/admin/setting/application-support', 'applicationSupport')->name('admin.setting.application-support');
     Route::post('/admin/setting-application-support/update', 'updateApplicationSupport')->name('admin.setting-application-support.update');
+
+    Route::get('/admin/setting/free-career-consultant', 'freeCareerConsultant')->name('admin.setting.free-career-consultant');
+    Route::post('/admin/setting-free-career-consultant/update', 'updateFreeCareerConsultant')->name('admin.setting-free-career-consultant.update');
 });
     
 
@@ -238,6 +258,8 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('/course/apply/{id}', 'courseApplySubmit')->name('frontend.course.apply.submit');
 
     Route::get('/course-search', 'search')->name('course.search');
+
+    Route::get('/free-career-consultant', 'freeCareerConsultant')->name('frontend.free-career-consultant');
     
 });
    

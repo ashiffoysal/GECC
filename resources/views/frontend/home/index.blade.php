@@ -92,9 +92,8 @@
 		<!-- Start Best Service Area -->
         @include('frontend.include.service')
 		<!-- End Best Service Area -->
-
+		@include('frontend.include.free_carrer_consultant')
 		<!-- Start Choose Area -->
-
 		<!-- End Choose Area -->
         @include('frontend.include.whychoiceus')
 		<!-- Start Financial Area -->

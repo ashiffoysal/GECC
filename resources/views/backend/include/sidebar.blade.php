@@ -6,15 +6,12 @@
                   <!-- sidebar menu-->
                   <ul class="sidebar-menu" data-widget="tree">
                       <li class="header">Dashboard & Apps</li>
-                      <li class="treeview">
-                          <a href="{{ url('admin') }}">
-                              <i class="icon-Layout-4-blocks"><span class="path1"></span><span
-                                      class="path2"></span></i>
-                              <span>Dashboard</span>
-                              
-                          </a>
+                   
+                        <li><a href="{{ url('admin') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Dashboard</a></li>
+                         <li><a href="{{ url('admin/contact-message') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Contact Messages</a></li>
+                         <li><a href="{{ url('/admin/all-application') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Candidate Application</a></li>
                         
-                      </li>
+                    
                       <li class="header">Company Settings</li>
                       <li class="treeview">
                           <a href="#">
@@ -223,7 +220,7 @@
                                     <li><a href="{{ route('admin.setting.eligibility-financial-aid') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Eligibility Financial Aid</a></li>
                                     <li><a href="{{ route('admin.setting.prerequisites') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Prerequisites</a></li>
                                     <li><a href="{{ route('admin.setting.application-support') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Application Support</a></li>
-                          
+                                    <li><a href="{{ route('admin.setting.free-career-consultant') }}"><i class="icon-Commit"><span  class="path1"></span><span class="path2"></span></i>Free Career Consultant</a></li>
                                 </ul>
 
                       </li>
